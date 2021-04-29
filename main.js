@@ -1,16 +1,21 @@
 const stringArr = ['Zero', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine'];
-const integersOutput = [];
+const stringsOutput = [];
 
 let converter = (inputArr) => {
     inputArr.forEach(int => {
-        let tempString = '';
-        for(let i = 0; i < int.length; i++){
-            tempString += stringArr[int[i]];
+        if(/^\d+$/.test(int)){
+            let tempString = '';
+            for(let i = 0; i < int.length; i++){
+                tempString += stringArr[int[i]];
+            }
+            stringsOutput.push(tempString);
+        } else{
+            stringsOutput.push('Contain None Integer Character');
         }
-        integersOutput.push(tempString);
+        
     });
-    console.log(String(integersOutput))
-    return integersOutput;
+    console.log(String(stringsOutput));
+    return stringsOutput;
 };
 
 
