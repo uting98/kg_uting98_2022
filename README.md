@@ -4,7 +4,7 @@
 
 ## Getting Started
 Clone repo, then:
-```
+```bash
 # node main.js [follows by Integer Array Inputs]
 node main.js 3 25 209
 ```
