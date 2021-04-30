@@ -5,8 +5,8 @@ let converter = (inputArr) => {
     inputArr.forEach(int => {
         if(/^\d+$/.test(int)){
             let tempString = '';
-            for(let i = 0; i < int.length; i++){
-                tempString += stringArr[int[i]];
+            for(let char of int){
+                tempString += stringArr[char];
             }
             stringsOutput.push(tempString);
         } else{
@@ -17,7 +17,6 @@ let converter = (inputArr) => {
     console.log(String(stringsOutput));
     return stringsOutput;
 };
-
 
 const integersInput = process.argv.slice(2);
 converter(integersInput);
